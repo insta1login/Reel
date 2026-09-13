@@ -1,0 +1,216 @@
+/* Instagram Login Clone - Dark Mode */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #041820;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+input {
+  font-family: inherit;
+  outline: none;
+}
+
+/* Page layout */
+.page {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  max-width: 430px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Language header */
+.lang-header {
+  display: flex;
+  justify-content: center;
+  padding-top: 12px;
+  padding-bottom: 8px;
+}
+
+.lang-selector {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 4px 8px;
+}
+
+.lang-arrow {
+  opacity: 0.9;
+}
+
+/* Main login area */
+.login-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 48px;
+}
+
+.logo-wrap {
+  margin-bottom: 36px;
+}
+
+.instagram-logo {
+  width: 76px;
+  height: 76px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Form */
+.login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.input-group {
+  width: 100%;
+}
+
+.form-input {
+  width: 100%;
+  height: 44px;
+  padding: 0 16px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1;
+  transition: border-color 0.15s ease;
+}
+
+.form-input::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.form-input:focus {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Login button */
+.btn-login {
+  width: 100%;
+  height: 44px;
+  margin-top: 4px;
+  background-color: #0095f6;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 12px;
+  transition: background-color 0.15s ease, opacity 0.15s ease;
+}
+
+.btn-login:disabled {
+  background-color: rgba(0, 149, 246, 0.4);
+  cursor: not-allowed;
+}
+
+.btn-login:not(:disabled):hover {
+  background-color: #0086e0;
+}
+
+.btn-login:not(:disabled):active {
+  background-color: #0077cc;
+}
+
+/* Forgot password */
+.forgot-link {
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.page-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 24px;
+  margin-top: auto;
+}
+
+.btn-create {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 44px;
+  border: 1px solid #0095f6;
+  border-radius: 12px;
+  color: #0095f6;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 48px;
+  transition: background-color 0.15s ease;
+}
+
+.btn-create:hover {
+  background-color: rgba(0, 149, 246, 0.08);
+}
+
+/* Meta branding */
+.meta-brand {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0.9;
+}
+
+.meta-logo-img {
+  height: 22px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Desktop: keep mobile look centered */
+@media (min-width: 431px) {
+  body {
+    background-color: #000000;
+  }
+
+  .page {
+    background-color: #041820;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05);
+  }
+}

